@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation"
+
 async function getPost(id) {
+   // imitate delay
+   await new Promise(resolve => setTimeout(resolve, 3000))
     const res = await fetch(`https://dummyapi.online/api/blogposts/${id}`, {
       next:{
         revalidate: 60
@@ -17,7 +20,7 @@ export default async function PostDetails({params}) {
   return (
     <main>
         <h2>{post.title}</h2>
-        <small>Published by {post.author} - {post.date_published}</small>
+        <small>Published by{post.author} - {post.date_published}</small>
         <p>{post.content}</p>
     </main>
   )

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 async function getPosts() {
+   // imitate delay
+   await new Promise(resolve => setTimeout(resolve, 3000))
   const res = await fetch('https://dummyapi.online/api/blogposts', {
     next:{
       revalidate: 30
@@ -9,6 +11,7 @@ async function getPosts() {
   return res.json()
 }
 export default async function PostList() {
+   
   const posts = await getPosts();
   return (
     <>
