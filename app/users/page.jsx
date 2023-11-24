@@ -1,14 +1,14 @@
 import { Suspense } from "react"
-import PostList from "./PostList"
 import Loading from "../loading"
+import UserList from "./UserList"
 
-export default function Posts() {
+export default function Users() {
     return (
      <main>
-          <h2>Posts</h2>
-          <p>Find your best post :)</p>
+          <h2>Authors</h2>
+          <p>Find your favourite author</p>
           <Suspense fallback={<Loading/>}>
-               <PostList/>
+               <UserList/>
           </Suspense>
      </main>
     )
