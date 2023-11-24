@@ -14,6 +14,7 @@ export default function Navbar() {
       />
       <Link href="/">Dashboard</Link>
       <Link href="/posts">Blog</Link>
+      <Link href="/users">Authors</Link>
     </nav>
   );
 }
