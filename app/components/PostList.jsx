@@ -3,7 +3,7 @@ import Link from "next/link";
 async function getPosts() {
    // imitate delay
    await new Promise(resolve => setTimeout(resolve, 3000))
-  const res = await fetch('https://dummyapi.online/api/blogposts', {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
     next:{
       revalidate: 30
     }
@@ -19,7 +19,7 @@ export default async function PostList() {
         <div key={post.id} className="card my-5">
           <Link href={`/posts/${post.id}`}>
           <h3>{post.title}</h3>
-          <p>{post.content.slice(0, 200)}...</p>
+          <p>{post.body.slice(0, 200)}...</p>
           </Link>
         </div>
       ))}

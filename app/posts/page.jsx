@@ -1,6 +1,7 @@
 import { Suspense } from "react"
-import PostList from "./PostList"
+import PostList from "../components/PostList"
 import Loading from "../loading"
+import PostListById from "../components/PostListById"
 
 export default function Posts() {
     return (
@@ -9,6 +10,8 @@ export default function Posts() {
           <p>Find your best post :)</p>
           <Suspense fallback={<Loading/>}>
                <PostList/>
+               <h2>user 1</h2>
+               <PostListById />
           </Suspense>
      </main>
     )

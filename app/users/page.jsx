@@ -1,15 +1,27 @@
-import { Suspense } from "react"
-import Loading from "../loading"
-import UserList from "./UserList"
+import { Suspense } from "react";
+import Loading from "../loading";
+import UserList from "../components/UserList";
+import Link from "next/link";
 
 export default function Users() {
-    return (
-     <main>
-          <h2>Authors</h2>
-          <p>Find your favourite author</p>
-          <Suspense fallback={<Loading/>}>
-               <UserList/>
-          </Suspense>
-     </main>
-    )
-  }
+  return (
+    <main>
+      <h2>Authors</h2>
+      <Link href="/users/create" className="hover:underline me-4 md:me-6">
+        <svg
+          class="w-6 h-4 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 18"
+        >
+          <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z" />
+        </svg>
+        Create user
+      </Link>
+      <Suspense fallback={<Loading />}>
+        <UserList />
+      </Suspense>
+    </main>
+  );
+}

@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation"
+import Link from "next/link";
 
 async function getUser(id) {
    // imitate delay
    await new Promise(resolve => setTimeout(resolve, 3000))
-    const res = await fetch(`https://dummyapi.online/api/users/${id}`, {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
       next:{
         revalidate: 60
       }
@@ -20,7 +21,12 @@ export default async function UserDetails({params}) {
   return (
     <main>
         <h2>{user.name}</h2>
-        <p>{user.email}</p>
+        <p>E-mail: {user.email}</p>
+        <p>Address:</p>
+        <p>Street: {user.address.street}</p>
+        <p>Suite: {user.address.suite}</p>
+        <p>City: {user.address.city}</p>
+        <p>Zip Code: {user.address.zipcode}</p>
     </main>
   )
 }
