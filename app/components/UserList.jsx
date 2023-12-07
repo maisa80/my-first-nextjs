@@ -19,9 +19,21 @@ export default async function UserList() {
       {users &&
         users.map((user) => (
           <div key={user.id} className="card my-5">
-            <Link href={`/users/${user.id}`}>
-              <h3>{user.name}</h3>
-            </Link>
+            <h3>{user.name}</h3>
+            <div className="flex place-content-end">
+              <Link
+                className="hover:underline px-2 text-primary"
+                href={`/users/${user.id}`}
+              >
+                Contact
+              </Link>
+              <Link
+                href={`/users/posts/${user.id}`}
+                className="hover:underline px-2 text-primary"
+              >
+                Posts
+              </Link>
+            </div>
           </div>
         ))}
     </>
