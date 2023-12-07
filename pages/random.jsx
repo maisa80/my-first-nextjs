@@ -36,7 +36,7 @@ function random({ cat, horse, dog }) {
           
           {cat &&
             cat.map((c) => (
-              <div key={c.id} className="card my-5">
+              <div key={c._id} className="card my-5">
                 <h3>{c.text}</h3>
               </div>
             ))}
@@ -45,7 +45,7 @@ function random({ cat, horse, dog }) {
           Horse:{" "}
           {horse &&
             horse.map((h) => (
-              <div key={h.id} className="card my-5">
+              <div key={h._id} className="card my-5">
                 <h3>{h.text}</h3>
               </div>
             ))}
@@ -54,7 +54,7 @@ function random({ cat, horse, dog }) {
           Dog:{" "}
           {dog &&
             dog.map((d) => (
-              <div key={d.id} className="card my-5">
+              <div key={d._id} className="card my-5">
                 <h3>{d.text}</h3>
               </div>
             ))}
