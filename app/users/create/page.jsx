@@ -6,5 +6,5 @@ export default function CreateUser() {
       <h2 className="text-center">Add new author</h2>
       <CreateForm />
     </main>
-  )
+  );
 }

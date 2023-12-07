@@ -1,10 +1,10 @@
-import CreateFormPost from '@/app/components/CreateFormPost'
-import React from 'react'
+import CreateFormPost from "@/app/components/CreateFormPost";
+import React from "react";
 
 export default function page({ params }) {
   return (
     <main>
-        <CreateFormPost params={params}/>
+      <CreateFormPost params={params} />
     </main>
-  )
+  );
 }

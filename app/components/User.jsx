@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import BackToUserList from "./BackToUserList";
 
-
 async function getUser(id) {
   // imitate delay
   await new Promise((resolve) => setTimeout(resolve, 3000));

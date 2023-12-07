@@ -30,17 +30,8 @@ const Login = () => {
     <>
       <h2>Testing the Login Form Component</h2>
 
-        {showUser && (
-          
-          <Alert variant="success">
-            {email}
-          </Alert>
-        )}
-        {error && (
-          <Alert variant="danger">
-            {error}
-          </Alert>
-        )}
+      {showUser && <Alert variant="success">{email}</Alert>}
+      {error && <Alert variant="danger">{error}</Alert>}
 
       <Form onSubmit={handleSubmit} noValidate>
         <Form.Group className="mb-4" controlId="formBasicEmail">
