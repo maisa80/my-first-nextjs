@@ -38,6 +38,29 @@ async function PostsByUser({ params }) {
     <main>
       <BackToUserList />
       <h2>{user.name} Posts</h2>
+      <h3 className="pt-8 text-primary flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+        <Link
+          href={`/users/posts/createpost/${user.id}`}
+          className="hover:underline px-2 text-primary"
+        >
+          Create a post
+        </Link>
+      </h3>
+
       {posts &&
         posts.map((post) => (
           <div key={post.id} className="card my-5">

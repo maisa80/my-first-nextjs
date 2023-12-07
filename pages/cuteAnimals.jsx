@@ -26,10 +26,10 @@ function cuteAnimals({ dogs, cats, birds }) {
       <Navbar />
       <main className={rubik.className}>
         <h1>Cute animal</h1>
-        <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-          <div class="-m-1 flex flex-wrap md:-m-2">
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
+        <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+          <div className="-m-1 flex flex-wrap md:-m-2">
+            <div className="flex w-1/3 flex-wrap">
+              <div className="w-full p-1 md:p-2">
                 {dogs.map((dog) => (
                   <Image
                     src={dog}
@@ -42,8 +42,8 @@ function cuteAnimals({ dogs, cats, birds }) {
                 ))}
               </div>
             </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
+            <div className="flex w-1/3 flex-wrap">
+              <div className="w-full p-1 md:p-2">
                 {cats.map((cat) => (
                   <Image
                     src={cat}
@@ -56,8 +56,8 @@ function cuteAnimals({ dogs, cats, birds }) {
                 ))}
               </div>
             </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
+            <div className="flex w-1/3 flex-wrap">
+              <div className="w-full p-1 md:p-2">
                 {birds.map((bird) => (
                   <Image
                     src={bird}

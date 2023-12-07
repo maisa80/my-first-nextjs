@@ -15,6 +15,7 @@ export default function CreateForm() {
     setIsLoading(true);
 
     //resource will not be really updated on the server but it will be faked as if.
+    //https://jsonplaceholder.typicode.com/guide/
     const newUser = { id: 11, name, username, email };
 
     const res = await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -27,6 +28,10 @@ export default function CreateForm() {
       router.refresh();
       router.push("/users");
     }
+    //console log data to make sure that the create user form is posting data
+    //{"id": 11,"name": "test","username": "test","email": "test@gmail.com"}
+
+    console.log(newUser);
   };
 
   return (

@@ -25,8 +25,11 @@ async function Comments({ params }) {
       {comments &&
         comments.map((comment) => (
           <div key={comment.id} className="card my-5">
-            <h3>{comment.name}</h3>
-            <p>{comment.body}</p>
+            <h3>name: {comment.name}</h3>
+            <div className="flex">
+              <h4>comment:</h4>
+              <p>{comment.body}</p>
+            </div>
           </div>
         ))}
     </main>

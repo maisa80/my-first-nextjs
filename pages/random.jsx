@@ -33,6 +33,7 @@ function random({ cat, horse, dog }) {
 
         <h3>
           Cats:{" "}
+          
           {cat &&
             cat.map((c) => (
               <div key={c.id} className="card my-5">
